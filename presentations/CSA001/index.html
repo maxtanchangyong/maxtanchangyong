@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My first presentation</title>
+    <link rel="stylesheet" href="/vendor/impress.js/css/impress-common.css">
+    <style>
+    .impress-supported .fallback-message { display: none; }
+    body.impress-mobile .step { display:none; }
+    body.impress-mobile .step.active,
+    body.impress-mobile .step.present,
+    body.impress-mobile .step.next,
+    body.impress-mobile .step.prev { display:block; }
+    </style>
+</head>
+
+<body class="impress-not-supported">
+    <div class="fallback-message">
+        <p>
+            Your browser <b>doesn't support the features required</b>
+            by impress.js, so you are presented with a simplified version
+            of this presentation.
+        </p>
+    </div>
+
+    <div id="impress-toolbar"><a href="slides" style="margin-right: 1rem;">Slides</a></div>
+    <div id="impress-help"></div>
+
+    <div id="impress">
+        <div id="step-1" class="step" data-x="0" data-y="0">
+            <h1>My First Slide</h1>
+        </div>
+        <div id="step-2" class="step" data-x="1000" data-y="0">
+            <h1>My Second Slide</h1>
+        </div>
+    </div>
+
+    <div class="impress-progressbar"><div></div></div>
+    <div class="impress-progress"></div>
+
+    <script src="/vendor/impress.js/js/impress.js"></script>
+    <script>
+        const impressApi = impress();
+        impressApi.init();
+    </script>
+</body>
+</html>
